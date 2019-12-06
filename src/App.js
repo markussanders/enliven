@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Redirect, Switch} from 'react-router-dom';
 import Logo from './components/Logo';
-import Home from './components/Home';
+import Home from './containers/Home';
 
 
 export default class App extends Component {
