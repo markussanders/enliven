@@ -26,6 +26,7 @@ class Slide extends React.Component {
   imageLoaded = (event) => {
     event.target.style.opacity = 1
   }
+
   
   render() {
     const { src, index } = this.props.slide
