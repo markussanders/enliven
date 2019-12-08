@@ -33,6 +33,10 @@ class Slider extends React.Component {
       this.setState({
         current: index
       })
+    } 
+    if (this.state.current === index) {
+      console.log('index', index);
+      this.props.handleImageClick(index);
     }
   }
 

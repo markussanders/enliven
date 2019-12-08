@@ -47,12 +47,20 @@ export default class PhotoContainer extends Component {
 
     renderPhotoCards() {
         let sliderData = this.sliderData(this.state.photoUrls);
-        return <Slider heading="inspo" slides={sliderData} />
+        return <Slider heading="inspo" slides={sliderData} handleImageClick={this.handleImageClick} />
         // return this.state.photoUrls.map(url => {
         //     return (
         //         <PhotoCard source={url} />
         //     )
         // })
+    }
+
+    handleImageClick = index => { 
+        //on image click, the index of the image is passed here where the url 
+        //can be obtained using its position in state's 'photoURls'.
+        // users should be then prompted to save the image to their board.
+        let clickedPhoto = this.state.photoUrls[index];
+        console.log('clickedPhoto = ', clickedPhoto);
     }
 
     render() {
